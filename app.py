@@ -5,18 +5,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-app = Flask(__name__, template_folder='./')
+app = app = Flask(__name__, template_folder='./')
 
 # Carregando o modelo e o LabelEncoder
-blob_service_client = BlobServiceClient.from_connection_string("4mB9owG6eCHnK7pI2hLcRTMJzBR7YA1HMIeUEnWD7VauziD3I2Q7ClgavCqCBaxwlomDRXZdaw/2+AStD+5taA==")
-blob_client = blob_service_client.get_blob_client("modelo", "model.pkl")
-
-with open("model.pkl", "wb") as model_file:
-    data = blob_client.download_blob().readall()
-    model_file.write(data)
-
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
+
+with open('encoder.pkl', 'rb') as f:
+    le = pickle.load(f)
 
 # Inicializando um DataFrame para armazenar as previsões
 predictions = pd.DataFrame(columns=['Ano', 'Mês', 'ID do Produto', 'ID da Categoria do Produto', 'Quantidade recomendada', 'Preço Recomendado'])
