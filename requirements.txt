@@ -1,6 +1,6 @@
-pandas
-matplotlib
-seaborn
-scikit-learn
-numpy
-flask
+pandas==2.0.2
+matplotlib==3.7.1
+seaborn==0.12.2
+scikit-learn==1.2.2
+numpy==1.25.0
+flask==2.3.2
