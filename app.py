@@ -10,7 +10,7 @@ app = Flask(__name__, template_folder='./')
 
 # Carregando o modelo e o LabelEncoder
 blob_service_client = BlobServiceClient.from_connection_string("4mB9owG6eCHnK7pI2hLcRTMJzBR7YA1HMIeUEnWD7VauziD3I2Q7ClgavCqCBaxwlomDRXZdaw/2+AStD+5taA==")
-blob_client = blob_service_client.get_blob_client("nuvemdrop", "model.pkl")
+blob_client = blob_service_client.get_blob_client("modelo", "model.pkl")
 
 with open("model.pkl", "wb") as model_file:
     data = blob_client.download_blob().readall()
