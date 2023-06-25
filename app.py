@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='./')
 
 # Carregando o modelo e o LabelEncoder
 with open('model.pkl', 'rb') as f:
