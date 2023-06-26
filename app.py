@@ -26,7 +26,9 @@ def predict():
     year = int(request.form['year'])
     month = int(request.form['month'])
     item_id = int(request.form['item_id'])
-    item_category_id = le.transform([int(request.form['item_category_id'])])[0]
+    original_item_category_id = int(request.form['item_category_id'])
+    item_category_id = le.transform([original_item_category_id])[0]
+
 
     product_input = pd.DataFrame({
         'year': [year],
@@ -47,7 +49,7 @@ def predict():
         'Ano': [year],
         'Mês': [month],
         'ID do Produto': [item_id],
-        'ID da Categoria do Produto': [item_category_id],
+        'ID da Categoria do Produto': [original_item_category_id],
         'Quantidade recomendada': [quantity_recommended],
         'Preço Recomendado': [price_recommended],
         'Receita Estimada': [revenue_estimated]
