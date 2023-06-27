@@ -12,4 +12,4 @@ Embora a coleta de dados através da API do Mercado Livre tenha sido inicialment
 
 Esse conjunto de dados pode ser encontrado no seguinte link: https://www.kaggle.com/competitions/competitive-data-science-predict-future-sales/data
 
-Portanto, o principal desafio deste projeto passou a ser a previsão de preços e quantidade de vendas recomendada ao longo dos meses para produtos de diferentes categorias, com base nos dados históricos disponíveis.
+Portanto, o principal desafio deste projeto passou a ser a previsão de preços e quantidade de estoque recomendada ao longo dos meses para produtos de diferentes categorias, com base nos dados históricos disponíveis.
